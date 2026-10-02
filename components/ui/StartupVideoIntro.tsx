@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef, useCallback } from "react";
+import styles from "./StartupVideoIntro.module.css";
 
 export function StartupVideoIntro() {
   const [isVisible, setIsVisible] = useState(true);
@@ -66,7 +67,7 @@ export function StartupVideoIntro() {
       role="dialog"
       aria-label="Glorious Academy Startup Intro"
       aria-modal="true"
-      className={`fixed inset-0 z-[99999] bg-black flex items-center justify-center overflow-hidden transition-opacity duration-700 ease-out ${
+      className={`${styles.overlay} fixed inset-0 z-[99999] bg-black flex items-center justify-center overflow-hidden transition-opacity duration-700 ease-out ${
         isFadingOut ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
     >
@@ -79,23 +80,24 @@ export function StartupVideoIntro() {
         playsInline
         preload="auto"
         onEnded={dismissIntro}
-        className="w-full h-full object-cover"
+        className={`${styles.video} w-full h-full object-cover`}
       />
 
       {/* Discreet Skip Button in Top-Right Corner */}
       <button
         type="button"
         onClick={dismissIntro}
-        className="absolute top-5 right-5 z-20 px-4 py-2 rounded-full bg-black/60 hover:bg-black/85 text-white/90 hover:text-white text-xs font-semibold tracking-wider uppercase backdrop-blur-md border border-white/20 transition-all duration-200 cursor-pointer shadow-lg hover:scale-105"
+        className={`${styles.skip} absolute top-5 right-5 z-20 px-4 py-2 rounded-full bg-black/60 hover:bg-black/85 text-white/90 hover:text-white text-xs font-semibold tracking-wider uppercase backdrop-blur-md border border-white/20 transition-all duration-200 cursor-pointer shadow-lg hover:scale-105`}
         aria-label="Skip video intro"
       >
         Skip Intro ✕
       </button>
 
       {/* Subtle indicator hint at bottom */}
-      <div className="absolute bottom-6 inset-x-0 text-center pointer-events-none z-10">
-        <span className="text-[11px] text-white/40 tracking-widest uppercase font-medium">
-          Press Esc or tap Skip to continue
+      <div className={`${styles.hint} absolute bottom-6 inset-x-0 text-center pointer-events-none z-10`}>
+        <span className={`${styles.hintText} text-[11px] text-white/40 tracking-widest uppercase font-medium`}>
+          <span className={styles.desktopHint}>Press Esc or tap Skip to continue</span>
+          <span className={styles.mobileHint}>Tap Skip to continue</span>
         </span>
       </div>
     </div>
