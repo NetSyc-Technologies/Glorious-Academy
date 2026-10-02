@@ -1,0 +1,17 @@
+[
+  {
+    "studentName": "Aditya Deshmukh",
+    "mobileNumber": "+91 98765 43210",
+    "email": "aditya@example.com",
+    "preferredCourse": "JEE (Main & Advanced) Preparation",
+    "preferredCentre": "Warora Naka, Chandrapur",
+    "currentClass": "Class 10 to 11 Moving",
+    "message": "Interested in the 2-Year Integrated Classroom Program.",
+    "consentContact": true,
+    "consentPrivacy": true,
+    "id": "enq_1790871414434_8ddtn",
+    "referenceId": "GA-2026-42901",
+    "createdAt": "2026-10-01T16:16:54.434Z",
+    "status": "new"
+  }
+]

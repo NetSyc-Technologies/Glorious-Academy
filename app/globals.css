@@ -1,0 +1,296 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1E40AF;
+  --color-primary-hover: #1E3A8A;
+  --color-primary-subtle: #EFF6FF;
+  --color-accent: #0F766E;
+  --color-accent-hover: #115E59;
+  --color-accent-surface: #ECFDF5;
+  --color-warm-surface: #FAFAF7;
+  --color-cool-surface: #F0F6FF;
+  --color-heading: #111827;
+  --color-body: #374151;
+  --color-secondary-text: #4B5563;
+  --color-border-subtle: #D8E1EB;
+  --color-border-hover: #CBD5E1;
+  --color-error: #B91C1C;
+  --color-focus: #1D4ED8;
+
+  --font-heading: var(--font-manrope), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --shadow-card: 0 12px 32px rgba(15, 23, 42, 0.06);
+  --shadow-card-hover: 0 20px 40px rgba(15, 23, 42, 0.1);
+  --shadow-dropdown: 0 16px 36px rgba(15, 23, 42, 0.12);
+}
+
+:root {
+  --background: #FFFFFF;
+  --foreground: #111827;
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  color: var(--foreground);
+  background: var(--background);
+}
+
+body {
+  font-family: var(--font-sans);
+  color: #374151;
+  background-color: #FFFFFF;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: #111827;
+  letter-spacing: -0.02em;
+}
+
+/* Accessible focus ring */
+:focus-visible {
+  outline: 2px solid #1D4ED8;
+  outline-offset: 2px;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Container helper */
+.site-container {
+  width: 100%;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .site-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .site-container {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+/* Custom scrollbar for modern browsers */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* ══════════════════════════════════════════════════════
+   ANIMATION KEYFRAMES & MOTION GRAPHICS
+   ══════════════════════════════════════════════════════ */
+
+/* Gradient shifting for decorative borders and backgrounds */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Ambient orb pulse */
+@keyframes orbPulse {
+  0%, 100% { transform: scale(1); opacity: 0.4; }
+  50% { transform: scale(1.2); opacity: 0.7; }
+}
+
+/* Soft shimmer effect for hero eyebrow badges */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+/* Horizontal dot pattern crawl */
+@keyframes dotCrawl {
+  from { background-position: 0 0; }
+  to { background-position: 48px 48px; }
+}
+
+/* Progress line draw */
+@keyframes drawLine {
+  from { stroke-dashoffset: 800; }
+  to { stroke-dashoffset: 0; }
+}
+
+/* Rotating border glow */
+@keyframes borderGlow {
+  0% { border-color: rgba(30, 64, 175, 0.2); box-shadow: 0 0 12px rgba(30, 64, 175, 0.05); }
+  50% { border-color: rgba(15, 118, 110, 0.3); box-shadow: 0 0 20px rgba(15, 118, 110, 0.1); }
+  100% { border-color: rgba(30, 64, 175, 0.2); box-shadow: 0 0 12px rgba(30, 64, 175, 0.05); }
+}
+
+/* Floating particle ambient */
+@keyframes floatParticle {
+  0%, 100% { transform: translateY(0) translateX(0); opacity: 0; }
+  10% { opacity: 0.6; }
+  90% { opacity: 0.6; }
+  50% { transform: translateY(-60px) translateX(20px); }
+}
+
+/* Typewriter cursor blink */
+@keyframes cursorBlink {
+  0%, 50% { border-color: #1E40AF; }
+  51%, 100% { border-color: transparent; }
+}
+
+/* Spinning conic gradient */
+@keyframes conicSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* SVG path draw animation */
+.svg-draw-path {
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+  animation: drawLine 2.5s ease-out forwards;
+}
+
+/* Animated gradient text */
+.gradient-text-animated {
+  background: linear-gradient(135deg, #1E40AF, #0F766E, #2563EB, #10B981);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 6s ease infinite;
+}
+
+/* Shimmer badge effect */
+.shimmer-badge {
+  position: relative;
+  overflow: hidden;
+}
+.shimmer-badge::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+/* Animated dot grid background */
+.animated-dot-grid {
+  background-image: radial-gradient(#1E40AF 1px, transparent 1px);
+  background-size: 24px 24px;
+  animation: dotCrawl 60s linear infinite;
+}
+
+/* Glass morphism card utility */
+.glass-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Premium card hover lift */
+.card-hover-lift {
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease;
+}
+.card-hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(15, 23, 42, 0.1), 0 0 0 1px rgba(30, 64, 175, 0.06);
+}
+
+/* Underline animation for nav links */
+.nav-link-underline {
+  position: relative;
+}
+.nav-link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #1E40AF, #0F766E);
+  border-radius: 2px;
+  transition: width 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), left 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.nav-link-underline:hover::after,
+.nav-link-underline.active::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Glowing CTA button effect */
+.glow-button {
+  position: relative;
+  overflow: hidden;
+}
+.glow-button::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(135deg, #1E40AF, #0F766E, #2563EB);
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease infinite;
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.glow-button:hover::before {
+  opacity: 1;
+}
+
+/* Rotating ring decoration */
+.rotating-ring {
+  animation: conicSpin 20s linear infinite;
+}
+
+/* Border glow animation */
+.border-glow-animate {
+  animation: borderGlow 4s ease-in-out infinite;
+}
+
+/* Particle container */
+.particle {
+  animation: floatParticle 8s ease-in-out infinite;
+}
+.particle:nth-child(2) { animation-delay: 1.5s; animation-duration: 10s; }
+.particle:nth-child(3) { animation-delay: 3s; animation-duration: 12s; }
+.particle:nth-child(4) { animation-delay: 4.5s; animation-duration: 9s; }
+.particle:nth-child(5) { animation-delay: 6s; animation-duration: 11s; }

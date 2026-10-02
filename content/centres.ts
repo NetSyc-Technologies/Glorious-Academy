@@ -1,0 +1,46 @@
+import { Centre } from "@/lib/types";
+
+export const centresData: Centre[] = [
+  {
+    slug: "chandrapur",
+    name: "Glorious Academy — Warora Naka Centre (Chandrapur)",
+    shortName: "Warora Naka, Chandrapur",
+    fullAddress: "Dr. Ambedkar College Campus, Opposite Agarzari Restaurant, Warora Naka, Chandrapur, Maharashtra – 442401",
+    landmark: "Opposite Agarzari Restaurant, Dr. Ambedkar College Campus",
+    city: "Chandrapur",
+    pin: "442401",
+    phone: "+91 7028766674",
+    altPhone: "+91 9764297221",
+    directionsUrl: "https://maps.google.com/?q=Dr.+Ambedkar+College+Campus,+Warora+Naka,+Chandrapur,+Maharashtra+442401",
+    operatingHours: "Monday to Saturday: 8:00 AM – 8:00 PM | Sunday: 9:00 AM – 2:00 PM",
+    offeredCourseSlugs: ["jee", "neet", "mht-cet", "boards"],
+    features: [
+      "Spacious, air-cooled lecture halls equipped with modern audio-visual learning aids",
+      "Dedicated doubt clarification desks staffed daily by subject mentors",
+      "Self-study library and quiet practice reading room",
+      "Computer-based testing lab for JEE Main and MHT-CET simulations",
+      "Convenient central location on Warora Naka with safe transit connectivity",
+    ],
+  },
+  {
+    slug: "bhadrawati",
+    name: "Glorious Academy — Bhadrawati Centre",
+    shortName: "Bhadrawati Centre",
+    fullAddress: "Indoor Stadium, Old Fish Market, Near Bank of India, Bhadrawati, Maharashtra – 442902",
+    landmark: "Near Bank of India, Indoor Stadium premises",
+    city: "Bhadrawati",
+    pin: "442902",
+    phone: "+91 9764297221",
+    altPhone: "+91 7028766674",
+    directionsUrl: "https://maps.google.com/?q=Indoor+Stadium,+Near+Bank+of+India,+Bhadrawati,+Maharashtra+442902",
+    operatingHours: "Monday to Saturday: 8:30 AM – 7:30 PM | Sunday: 9:00 AM – 1:00 PM",
+    offeredCourseSlugs: ["jee", "neet", "mht-cet", "boards"],
+    features: [
+      "Focused classroom environment designed for active learning and student-faculty interaction",
+      "Regular weekend mock tests and OMR evaluation desk",
+      "Printed study materials and daily practice problem (DPP) distribution counter",
+      "Parent consultation room for performance reviews and admissions guidance",
+      "Easily accessible from key residential and school zones in Bhadrawati",
+    ],
+  },
+];
