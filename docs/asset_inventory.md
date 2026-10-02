@@ -1,10 +1,12 @@
 # Glorious Academy — Asset Inventory
 
-| Asset Name | Purpose | Current Implementation | Source / Rights | Production Status |
-| --- | --- | --- | --- | --- |
-| **Brand Crest** | Academy header, footer, drawer | Code-native SVG with Graduation Cap & deep-blue to teal gradient | Custom implementation | Complete (Official brand vector to be swapped upon client delivery) |
-| **Hero Concept SVG** | Homepage hero educational focal point | Custom SVG showing coordinate grid, science orbitals, progressive learning path, and milestone markers | Code-native SVG asset | Complete & Accessible |
-| **Course Subject Cues** | Course cards & details | Lucide outline icons (Engineering CPU, Stethoscope, Compass, Graduation Cap) | Lucide React | Complete |
-| **Campus Maps** | Centres showcase & detail pages | External Google Maps query links using verified addresses | Google Maps external API | Complete |
-| **PYQ Question Papers** | Previous Year Papers archive | Download & inspect handler with official attribution metadata | NTA, CBSE & State Board archives | Public Archive Ready |
-| **Faculty Portraits** | Leadership & teaching | Typographic leadership badge and verified profiles | Pending client delivery | Gracefully handled |
+| Asset | Current use | Status |
+| --- | --- | --- |
+| `public/images/galogo.png` | Shared header, footer, mobile menu, logo film entry, page icons | Official logo supplied by user |
+| `public/images/galogo_animated.mp4` | Homepage logo film dialog with native playback controls | Supplied animation; playback verified |
+| `public/images/nitish_kumar.png` | Founder feature, hero attribution, About page | Portrait supplied by user |
+| Existing classroom and centre JPGs | Hero and horizontal photo gallery | Reused project assets; confirm campus/photo attribution before launch |
+| Science graphics | CSS depth, floating orbital shapes and Lucide subject icons | Code-native, supports reduced motion |
+| Question papers | Direct official JEE Advanced PDFs and labelled exam portals | Source URLs documented in redesign-handoff.md |
+
+See [redesign handoff](redesign-handoff.md) for verification and production limitations.

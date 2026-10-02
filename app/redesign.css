@@ -164,8 +164,18 @@ main>div:not(.ga-home)>section:first-child h1::after { content:""; display:block
 @media(max-width:380px) { .header-enquire { display:none; }.hero-copy h1 { font-size:60px; }.hero-star { font-size:34px; margin-left:10px; }.hero-visual { height:430px; }.hero-photo-move { height:360px; }.hero-floating-note { padding:13px; gap:9px; }.hero-floating-note strong { font-size:10px; }.hero-actions { gap:16px; }.hero-actions .ga-button { padding:15px 17px; }.hero-film-button { font-size:10px; }.ga-home h2 { font-size:30px; }.gallery-controls { display:none; } }
 @media(prefers-reduced-motion:reduce) { *,*::before,*::after { animation:none!important; transition:none!important; scroll-behavior:auto!important; }.hero-photo:hover img,.gallery-photo:hover img { transform:none; scale:1; } }
 
-/* Crop the existing classroom photograph around students, below wall signage. */
-.hero-photo img { scale:1.25; transform-origin:50% 70%; }
-.hero-photo:hover img { scale:1.28; }
+/* Frame the gallery classroom photograph around the students. */
+.hero-photo-caption { bottom:62px; }
 .gallery-photo:first-child img { scale:1.3; transform-origin:50% 75%; }
-@media(prefers-reduced-motion:reduce) { .hero-photo:hover img { scale:1.25; } }
+
+.resource-library h1 { font-size:clamp(42px,5vw,68px); line-height:1.08; font-weight:600; letter-spacing:-.06em; }
+.resource-library h1 span { color:var(--ga-blue); }
+.library-intro { max-width:620px; font-size:15px; color:var(--ga-muted); line-height:1.8; margin-top:25px; }
+.library-filters { display:grid; grid-template-columns:2fr 1fr 1fr; gap:20px; padding:26px; background:white; border:1px solid var(--ga-line); border-radius:12px; margin:40px 0 22px; }
+.library-filters label>span { display:block; font-size:11px; font-weight:600; margin-bottom:10px; }
+.library-filters select,.library-search>div { min-height:46px; width:100%; border:1px solid #cbd3d4; border-radius:6px; background:var(--ga-paper); font-size:12px; }
+.library-filters select { padding:0 12px; }.library-search>div { display:flex; gap:10px; align-items:center; padding:0 12px; }.library-search input { min-width:0; width:100%; padding:12px 0; background:transparent; }
+.library-count { display:flex; justify-content:space-between; font-size:11px; color:var(--ga-muted); margin-bottom:25px; }.library-count button { text-decoration:underline; color:var(--ga-blue); }
+.library-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }.library-card { background:white; border:1px solid var(--ga-line); border-radius:10px; padding:28px; display:flex; flex-direction:column; }.library-card-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:30px; color:var(--ga-blue); }.library-card-top span { font-size:9px; background:#eef3f6; padding:5px 8px; border-radius:4px; }.library-card .ga-eyebrow { font-size:8px; margin-bottom:12px; }.library-card h2 { font-size:21px; line-height:1.35; letter-spacing:-.03em; }.library-card p { font-size:12px; line-height:1.8; color:var(--ga-muted); margin:16px 0 25px; }.library-card small { font-size:9px; color:#6e7f89; margin-top:auto; }.library-card a { display:flex; align-items:center; justify-content:space-between; font-size:12px; font-weight:600; border-top:1px solid var(--ga-line); margin-top:20px; padding-top:20px; }.library-card a:hover { color:var(--ga-blue); }.library-note { font-size:11px; line-height:1.9; color:var(--ga-muted); margin-top:30px; }.library-empty { padding:60px 20px; text-align:center; }.library-empty p { margin:20px; }
+@media(max-width:900px) { .library-grid { grid-template-columns:1fr 1fr; }.library-filters { grid-template-columns:1fr 1fr; }.library-search { grid-column:1/-1; } }
+@media(max-width:600px) { .library-grid,.library-filters { grid-template-columns:1fr; }.library-card { padding:25px; }.library-filters { padding:20px; }.resource-library h1 { font-size:42px; }.library-intro { font-size:13px; } }

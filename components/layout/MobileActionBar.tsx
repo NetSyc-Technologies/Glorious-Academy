@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { siteConfig } from "@/content/site-config";
 import { Phone, ArrowRight } from "lucide-react";
-import { cn } from "@/lib/utils";
+
 
 export function MobileActionBar() {
   const [isVisible, setIsVisible] = useState(true);
@@ -53,7 +53,7 @@ export function MobileActionBar() {
 
         <Link
           href="/admissions"
-          className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl bg-[#1E40AF] text-white text-xs font-bold shadow-sm active:bg-[#1E3A8A] focus-visible:outline-2 focus-visible:outline-[#1D4ED8]"
+          className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl bg-[#102d46] text-white text-xs font-bold shadow-sm active:bg-[#1E3A8A] focus-visible:outline-2 focus-visible:outline-[#1D4ED8]"
         >
           <span>Enquire Now</span>
           <ArrowRight className="w-3.5 h-3.5" />
@@ -62,3 +62,4 @@ export function MobileActionBar() {
     </aside>
   );
 }
+

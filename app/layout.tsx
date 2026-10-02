@@ -5,6 +5,7 @@ import "./redesign.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileActionBar } from "@/components/layout/MobileActionBar";
+import { StartupVideoIntro } from "@/components/ui/StartupVideoIntro";
 import { siteConfig } from "@/content/site-config";
 
 const inter = Inter({
@@ -22,6 +23,7 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.canonicalDomain),
+  icons: { icon: "/images/galogo.png", apple: "/images/galogo.png" },
   title: {
     default: "Glorious Academy | Clear Learning. Confident Futures.",
     template: "%s | Glorious Academy",
@@ -69,6 +71,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${manrope.variable}`}>
       <body className="min-h-screen flex flex-col bg-white text-[#374151] antialiased">
+        <StartupVideoIntro />
         <Header />
         <main id="main-content" className="flex-1">
           {children}

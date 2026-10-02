@@ -108,12 +108,11 @@ export interface ResourcePaper {
   id: string;
   title: string;
   exam: "JEE Main" | "JEE Advanced" | "NEET" | "MHT-CET" | "CBSE Class 10" | "CBSE Class 12";
-  year: number;
+  year: number | null;
   subjectOrSession: string;
-  type: "Question Paper" | "Answer Key & Solution";
-  fileSize: string;
-  format: "PDF";
-  downloadFileName: string;
+  type: "Question Paper" | "Practice Portal" | "Exam Resources";
+  format: "PDF" | "Official portal";
+  sourceUrl: string;
   sourceAttribution: string;
   verificationStatus: VerificationStatus;
 }

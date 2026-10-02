@@ -25,9 +25,9 @@ export default function ResourcesPage() {
     {
       title: "Previous Year Question Papers (PYQs)",
       description:
-        "Official question papers and verified answer keys for JEE Main, JEE Advanced, NEET UG, MHT-CET, and CBSE Board examinations.",
+        "Official question papers, practice tools, and links to examination resources for JEE, NEET, MHT-CET, and CBSE Boards.",
       link: "/resources/pyqs",
-      linkText: "Browse & Download PYQs",
+      linkText: "Explore Official Resources",
       icon: <FileText className="w-6 h-6 text-[#1E40AF]" />,
       badge: "Public Access Archive",
     },
@@ -150,3 +150,4 @@ export default function ResourcesPage() {
     </div>
   );
 }
+
